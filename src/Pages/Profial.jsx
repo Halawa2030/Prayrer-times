@@ -5,7 +5,7 @@ import React from 'react';
 import { Box, Typography, Avatar, IconButton, Link, Stack  } from '@mui/material';
 import { GitHub, LinkedIn, Facebook, WhatsApp } from '@mui/icons-material';
 import backgroundImage from '../images/backgroundimage.jpg';       // صورة الخلفية
-       // صورتك الشخصية
+import profialimage from '../images/avatar.1.1.jpg' // صورتك الشخصية
 
 export default function Profile() {
   return (
@@ -44,7 +44,7 @@ export default function Profile() {
         }}
       >
         <Avatar
-          src={"/src/images/avatar.1.1.jpg"}
+          src={profialimage}
           alt="Ashraf Halawa"
           sx={{
             width: 120,
