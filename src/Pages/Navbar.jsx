@@ -14,6 +14,8 @@ import Menu from '@mui/material/Menu';
 import Tooltip from '@mui/material/Tooltip';
 import Container from '@mui/material/Container'; 
 import { Avatar } from '@mui/material';
+import profialimage from '../images/avatar.1.1.jpg' // صورتك الشخصية
+
 
 export default function MenuAppBar() {
   const [anchorPrayerEl, setAnchorPrayerEl] = React.useState(null);
@@ -61,7 +63,7 @@ export default function MenuAppBar() {
               // aria-label="account of current user"
               onClick={() => navigate('/profile')}
               color="inherit"
-            ><Avatar alt="Ashraf Halawa" src="/src/images/avatar.1.1.jpg"   sx={{ width: 40, height: 40 }}/>
+            ><Avatar alt="Ashraf Halawa" src={profialimage}   sx={{ width: 40, height: 40 }}/>
               {/* <AccountCircle /> */}
             </IconButton>
 
