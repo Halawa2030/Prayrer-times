@@ -24,10 +24,10 @@ export default function Prayer(props) {
           
         />
         <CardContent>
-          <h2 gutterBottom variant="h5" component="div">
+          <h2 style={{color:"#208391ff"}} gutterBottom variant="h5" component="div">
             {props.title}
           </h2>
-          <h1 variant="h4" sx={{ color: 'text.secondary' }}>
+          <h1 variant="h4" style={{color:"#3c998dff"}} sx={{ color: 'text.secondary' }}>
             {props.time}
           </h1>
         </CardContent>

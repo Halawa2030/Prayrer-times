@@ -57,8 +57,8 @@ export default function Profile() {
         <Typography variant="h4" fontWeight="bold" gutterBottom>
           Ashraf Halawa
         </Typography>
-        <Typography variant="body1" sx={{ mb: 3 ,fontSize:18}}>
-          <strong style={{fontSize:"27px" ,color:"#34d9c4"}}>Frontend Developer </strong>  Passionate about crafting clean interfaces with React
+        <Typography variant="body1" sx={{ mb: 3 ,fontSize:15}}>
+          <strong style={{fontSize:"25px" ,color:"#34d9c4"}}>Frontend Developer </strong>  Passionate about crafting clean interfaces with React
           <br />
          Always learning, always building
         </Typography>

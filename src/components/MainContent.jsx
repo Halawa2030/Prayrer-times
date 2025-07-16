@@ -189,9 +189,9 @@ setDay(Day.format('dddd'))
           textAlign: 'center',
           margin:"10px"
         }}>
-          <h2> {Day}  : {Days}  </h2>
+          <h2 style={{color:"#3c998dff"}}> {Day}  : {Days}  </h2>
   
-          <h1> {selescCity.displayName}</h1>
+          <h1 style={{color:"#3c998dff"}}> {selescCity.displayName}</h1>
 
         </div>
       </Grid>
@@ -205,8 +205,8 @@ setDay(Day.format('dddd'))
           margin:"10px"
 
         }}>
-          <h2>متبقي حتي صلاه {prayerArray[nextPrayerindex].displayName}</h2>
-          <h1 style={{direction:"ltr"}}>{remaingTime}</h1>
+          <h2 style={{color:"#3c998dff"}}>متبقي حتي صلاه {prayerArray[nextPrayerindex].displayName}</h2>
+          <h1  style={{direction:"ltr",color:"#3c998dff"}}>{remaingTime}</h1>
        
         </div>
       </Grid>
