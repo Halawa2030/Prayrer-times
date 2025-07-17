@@ -88,13 +88,13 @@ useEffect(() => {
 
 const setupCountdownTimer =(() => {
   const momentNow =moment();
-  let Prayerindex =2;
+  let Prayerindex =1;
 
 if(momentNow.isAfter(moment(timings["Fajr"], "hh:mm")) &&momentNow.isBefore(moment(timings["Dhuhr"], "hh:mm"))){
   // console.log("next Prayer is Duher");
   Prayerindex=1
   
-}else if(momentNow.isAfter(moment(timings["Duher"], "hh:mm")) &&momentNow.isBefore(moment(timings["Asr"], "hh:mm"))){
+}else if(momentNow.isAfter(moment(timings["Dhuhr"], "hh:mm")) &&momentNow.isBefore(moment(timings["Asr"], "hh:mm"))){
   // console.log("next Prayer is Asr");
   Prayerindex=2
   
