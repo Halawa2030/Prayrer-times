@@ -88,7 +88,7 @@ useEffect(() => {
 
 const setupCountdownTimer =(() => {
   const momentNow =moment();
-  let Prayerindex =1;
+  let Prayerindex =0;
 
 if(momentNow.isAfter(moment(timings["Fajr"], "hh:mm")) &&momentNow.isBefore(moment(timings["Dhuhr"], "hh:mm"))){
   // console.log("next Prayer is Duher");

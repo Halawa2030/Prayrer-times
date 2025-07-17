@@ -22,6 +22,15 @@ import Prayerson10 from './Pages/Prayerson10';
 import Prayerson11 from './Pages/Prayerson11';
 import Prayerson12 from './Pages/Prayerson12';
 import Prayerson13 from './Pages/Prayerson13';
+import Azkar1 from './Azkar/Azkar1'
+import Azkar2 from './Azkar/Azkar2'
+import Azkar3 from './Azkar/Azkar3'
+import Azkar4 from './Azkar/Azkar4'
+import Azkar5 from './Azkar/Azkar5'
+import Azkar6 from './Azkar/Azkar6'
+
+
+
 
 function App() {
   return (
@@ -47,7 +56,12 @@ function App() {
           <Route path="/Duha" element={<Prayerson11 />}/>
           <Route path="/Masjid" element={<Prayerson12 />}/>
           <Route path="/Quiam" element={<Prayerson13 />}/>
-          <Route path="/eid" element={<Prayerson5 />}/>
+          <Route path="/azkar/morning" element={<Azkar1 />}/>
+          <Route path="/azkar/evening" element={<Azkar2 />}/>
+          <Route path="/azkar/sleep" element={<Azkar3 />}/>
+          <Route path="/azkar/wake-up" element={<Azkar4 />}/>
+          <Route path="/azkar/after-prayer" element={<Azkar5 />}/>
+          <Route path="/azkar/general" element={<Azkar6 />}/>
 
         </Routes>
       </Container>
