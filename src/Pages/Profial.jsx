@@ -5,7 +5,7 @@ import React from 'react';
 import { Box, Typography, Avatar, IconButton, Link, Stack  } from '@mui/material';
 import { GitHub, LinkedIn, Facebook, WhatsApp } from '@mui/icons-material';
 import backgroundImage from '../images/backgroundimage.jpg';       // صورة الخلفية
-import profialimage from '../images/avatar.1.1.jpg' // صورتك الشخصية
+import profialimage from '../images/avatar.jpg' // صورتك الشخصية
 
 export default function Profile() {
   return (
