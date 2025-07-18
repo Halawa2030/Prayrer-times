@@ -135,7 +135,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuBookIcon from '@mui/icons-material/MenuBook'; // أيقونة الأذكار
 import MosqueIcon from '@mui/icons-material/Mosque';     // أيقونة الصلاة
 import { Avatar, Container, MenuItem, Menu, Tooltip } from '@mui/material';
-import profialimage from '../images/avatar.1.1.jpg';
+import profialimage from '../images/avatar.jpg';
 
 export default function MenuAppBar() {
   const [anchorPrayerEl, setAnchorPrayerEl] = React.useState(null);
