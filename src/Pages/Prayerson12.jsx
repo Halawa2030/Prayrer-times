@@ -10,7 +10,7 @@ export default function PrayerMasjid() {
 
       <Box
         component="img"
-        src="https://i.imgur.com/fY9dfkC.jpg"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkCUGnjNuCL3bPiXLCYJe4VXzcB3kodx0vTw&s"
         alt="صلاة تحية المسجد"
         sx={{
           width: '100%',
