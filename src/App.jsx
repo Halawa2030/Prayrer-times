@@ -14,6 +14,7 @@ import Prayerson1 from './Pages/Prayerson1';
 import Prayerson2 from './Pages/Prayerson2';
 import Prayerson3 from './Pages/Prayerson3';
 import Prayerson4 from './Pages/Prayerson4';
+import Prayerson5 from './Pages/Prayerson5';
 import Prayerson6 from './Pages/Prayerson6';
 import Prayerson7 from './Pages/Prayerson7';
 import Prayerson8 from './Pages/Prayerson8';
@@ -40,16 +41,17 @@ function App() {
         <Container maxWidth="lg" sx={{ p: 0, width: '100%', display: 'flex',minHeight:"100vh", flexDirection: 'column', flexGrow: 1 }}>
           <Routes>
             <Route path="/" element={<MainContent />} />
-            <Route path="/prayer/fajer" element={<Prayerinfo1 />} />
-            <Route path="/prayer/duher" element={<Prayerinfo2 />} />
-            <Route path="/prayer/asr" element={<Prayerinfo3 />} />
-            <Route path="/prayer/maghrab" element={<Prayerinfo4 />} />
-            <Route path="/prayer/isha" element={<Prayerinfo5 />} />
+            <Route path="/prayer/Fajr" element={<Prayerinfo1 />} />
+            <Route path="/prayer/Dhuhr" element={<Prayerinfo2 />} />
+            <Route path="/prayer/Asr" element={<Prayerinfo3 />} />
+            <Route path="/prayer/Maghrib" element={<Prayerinfo4 />} />
+            <Route path="/prayer/Isha" element={<Prayerinfo5 />} />
             <Route path="/profile" element={<Profial />} />
             <Route path="/istikhaarah" element={<Prayerson1 />}/>
             <Route path="/repentance" element={<Prayerson2 />}/>
             <Route path="/need" element={<Prayerson3 />}/>
             <Route path="/tasbeeh" element={<Prayerson4 />}/>
+            <Route path="/eid" element={<Prayerson5 />}/>
             <Route path="/istisqa" element={<Prayerson6 />}/>
             <Route path="/Tahajjud" element={<Prayerson7 />}/>
             <Route path="/Kusoff" element={<Prayerson8 />}/>

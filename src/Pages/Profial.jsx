@@ -11,7 +11,7 @@ export default function Profile() {
   return (
     <Box
       sx={{
-        minHeight: '90vh',
+        minHeight: '100vh',
         backgroundImage:` url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
