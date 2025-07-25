@@ -1,4 +1,6 @@
 
+
+
 import React, { useState, useEffect } from "react";
 import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
@@ -15,7 +17,7 @@ import Navbar from "../Pages/Navbar";
 import FooterNavbar from "../Pages/FooterNavbar";
 import { Typography, IconButton, Dialog, DialogTitle, DialogContent, useTheme } from "@mui/material";
 import LocationCityIcon from '@mui/icons-material/LocationCity';
-import TasbeehCounter from "../Pages/TasbeehCounter"; // تأكد من وجود هذا المكون ومساره
+import TasbeehCounter from "../Pages/TasbeehCounter";
 
 moment.locale("ar");
 
@@ -113,14 +115,14 @@ export default function MainContent() {
     let nextPrayerTimeMoment = times[prayerArray[Prayerindex].key];
 
     if (Prayerindex === 0 && momentNow.isAfter(times.Isha)) {
-        nextPrayerTimeMoment.add(1, 'day');
+      nextPrayerTimeMoment.add(1, "day");
     }
 
     let remaining = nextPrayerTimeMoment.diff(momentNow);
 
     const duration = moment.duration(remaining);
     setRemaingTime(
-      `${String(duration.hours()).padStart(2, '0')} : ${String(duration.minutes()).padStart(2, '0')} : ${String(duration.seconds()).padStart(2, '0')}`
+      `${String(duration.hours()).padStart(2, "0")} : ${String(duration.minutes()).padStart(2, "0")} : ${String(duration.seconds()).padStart(2, "0")}`
     );
   };
 
@@ -153,126 +155,83 @@ export default function MainContent() {
   };
 
   return (
-    <>
+    <Box display="flex" flexDirection="column" minHeight="100vh">
       <Navbar />
 
-      <Grid container spacing={1} justifyContent="center" alignItems="stretch" sx={{ px: { xs: 1, sm: 2 }, mt: 2, width: '100%' }}>
-        <Grid item xs={12} sm={6} md={6}>
-          <Box
-            sx={{
-              bgcolor: 'background.paper',
-              p: { xs: 1, sm: 1.5, md: 2 },
-              borderRadius: 2,
-              textAlign: "center",
-              height: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              boxShadow: 3,
-            }}
-          >
-            <Typography
-              variant="h6"
-              sx={{ color: 'primary.main', margin: '0' }}
+      <Box component="main" flexGrow={1}>
+        <Grid container spacing={1} justifyContent="center" alignItems="stretch" sx={{ px: { xs: 1, sm: 2 }, mt: 2, width: '100%' }}>
+          <Grid item xs={12} sm={6} md={6}>
+            <Box
+              sx={{
+                bgcolor: 'background.paper',
+                p: { xs: 1, sm: 1.5, md: 2 },
+                borderRadius: 2,
+                textAlign: "center",
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                boxShadow: 3,
+              }}
             >
-              {Day} : {Days}
-            </Typography>
-            <Box display="flex" justifyContent="center" alignItems="center">
-              <Typography
-                variant="h4"
-                sx={{ color: 'text.primary', margin: '0' }}
-              >
-                {selescCity.displayName}
+              <Typography variant="h6" sx={{ color: 'primary.main', margin: '0' }}>
+                {Day} : {Days}
               </Typography>
-              <IconButton onClick={handleOpenCityDialog} sx={{ ml: 1, color: 'text.primary' }}>
-                <LocationCityIcon />
-              </IconButton>
+              <Box display="flex" justifyContent="center" alignItems="center">
+                <Typography variant="h4" sx={{ color: 'text.primary', margin: '0' }}>
+                  {selescCity.displayName}
+                </Typography>
+                <IconButton onClick={handleOpenCityDialog} sx={{ ml: 1, color: 'text.primary' }}>
+                  <LocationCityIcon />
+                </IconButton>
+              </Box>
             </Box>
-          </Box>
-        </Grid>
+          </Grid>
 
-        <Grid item xs={12} sm={6} md={6}>
-          <Box
-            sx={{
-              bgcolor: 'background.paper',
-              p: { xs: 1, sm: 1.5, md: 2 },
-              borderRadius: 2,
-              textAlign: "center",
-              height: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              boxShadow: 3,
-            }}
-          >
-            <Typography
-              variant="h6"
-              sx={{ color: 'primary.main', margin: '0' }}
+          <Grid item xs={12} sm={6} md={6}>
+            <Box
+              sx={{
+                bgcolor: 'background.paper',
+                p: { xs: 1, sm: 1.5, md: 2 },
+                borderRadius: 2,
+                textAlign: "center",
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                boxShadow: 3,
+              }}
             >
-              متبقي حتى صلاة {prayerArray[nextPrayerindex].displayName}
-            </Typography>
-            <Typography
-              variant="h4"
-              sx={{ direction: "ltr", color: 'text.primary', margin: '0' }}
-            >
-              {remaingTime}
-            </Typography>
-          </Box>
+              <Typography variant="h6" sx={{ color: 'primary.main', margin: '0' }}>
+                متبقي حتى صلاة {prayerArray[nextPrayerindex].displayName}
+              </Typography>
+              <Typography variant="h4" sx={{ direction: "ltr", color: 'text.primary', margin: '0' }}>
+                {remaingTime}
+              </Typography>
+            </Box>
+          </Grid>
         </Grid>
-      </Grid>
 
-      <Divider sx={{ my: 1.3, borderColor: 'text.secondary', width: '90%', maxWidth: 'md', alignSelf: 'center' }} />
+        <Divider sx={{ my: 1.3, borderColor: 'text.secondary', width: '90%', maxWidth: 'md', alignSelf: 'center' }} />
 
-      <Grid container spacing={2} justifyContent="center" sx={{ px: { xs: 1, sm: 2 }, width: '100%', mb: 3 }}>
-        <Grid item xs={6} sm={4} md={2.4}>
-          <Prayer
-            title="الفجر"
-            time={timings?.Fajr}
-            id="1"
-            route="fajer"
-            imagg="https://img.youm7.com/large/202309181239373937.jpg"
-          />
+        <Grid container spacing={2} justifyContent="center" sx={{ px: { xs: 1, sm: 2 }, width: '100%', mb: 3 }}>
+          {prayerArray.map((prayer, index) => (
+            <Grid item xs={6} sm={4} md={2.4} key={prayer.key}>
+              <Prayer
+                title={prayer.displayName}
+                time={timings[prayer.key]}
+                id={index + 1}
+                route={prayer.key.toLowerCase()}
+                imagg="https://img.youm7.com/large/202309181239373937.jpg" // أو استخدم الصور الأصلية لو عاوز
+              />
+            </Grid>
+          ))}
         </Grid>
-        <Grid item xs={6} sm={4} md={2.4}>
-          <Prayer
-            title="الظهر"
-            time={timings?.Dhuhr}
-            id="2"
-            route="duher"
-            imagg="https://hyatoky.com/mwfiles/thumbs/fit630x300/13090/1610015500/%D9%85%D8%AA%D9%89_%D9%8A%D9%83%D9%88%D9%86_%D9%88%D9%82%D8%AA_%D8%A7%D9%84%D8%B2%D9%88%D8%A7%D9%84.jpg"
-          />
-        </Grid>
-        <Grid item xs={6} sm={4} md={2.4}>
-          <Prayer
-            title="العصر"
-            time={timings?.Asr}
-            id="3"
-            route="asr"
-            imagg="https://blog.ajsrp.com/wp-content/uploads/2025/05/%D8%A3%D9%87%D9%85%D9%8A%D8%A9-%D8%B5%D9%84%D8%A7%D8%A9-%D8%A7%D9%84%D8%B9%D8%B5%D8%B1-696x398.jpeg"
-          />
-        </Grid>
-        <Grid item xs={6} sm={4} md={2.4}>
-          <Prayer
-            title="المغرب"
-            time={timings?.Maghrib}
-            id="4"
-            route="maghrab"
-            imagg="https://i.pinimg.com/736x/22/44/ee/2244ee86d36c8ddb3c3e668c7ff4d205.jpg"
-          />
-        </Grid>
-        <Grid item xs={6} sm={4} md={2.4}>
-          <Prayer
-            title="العشاء"
-            time={timings?.Isha}
-            id="5"
-            route="isha"
-            imagg="https://img.youm7.com/large/202309181239373937.jpg"
-          />
-        </Grid>
-      </Grid>
-            <Divider sx={{ my: -.75, borderColor: 'text.secondary', width: '90%', maxWidth: 'md', alignSelf: 'center' }} />
 
-      <TasbeehCounter />
+        <Divider sx={{ my: -.75, borderColor: 'text.secondary', width: '90%', maxWidth: 'md', alignSelf: 'center' }} />
+
+        <TasbeehCounter />
+      </Box>
 
       <FooterNavbar />
 
@@ -299,6 +258,6 @@ export default function MainContent() {
           </FormControl>
         </DialogContent>
       </Dialog>
-    </>
+    </Box>
   );
 }

@@ -156,8 +156,8 @@ export default function TasbeehCounter({ sx }) { // استقبل الـ sx props
     <Paper
       elevation={3}
       sx={{
-        p: 2,
-        mt: 3,
+        p: 1,
+        mt: 2,
         mx: 'auto',
         maxWidth: 400,
         width: '90%',
@@ -171,18 +171,18 @@ export default function TasbeehCounter({ sx }) { // استقبل الـ sx props
         justifyContent: 'center',
         minHeight: 200,
         border: `1px solid ${theme.palette.divider}`,
-        ...sx // تطبيق الـ sx props المستلمة هنا، بما في ذلك mb: 0
+        ...sx 
       }}
     >
       <Typography variant="h5" sx={{ mb: 1, color: 'primary.main', fontWeight: 'bold' }}>
         السبحة الإلكترونية
       </Typography>
 
-      <Typography variant="h6" sx={{ mb: 2, color: 'text.secondary' }}>
+      <Typography variant="h6" sx={{ mb: 1, color: 'text.secondary' }}>
         {tasbeehText}
       </Typography>
 
-      <Typography variant="h3" sx={{ mb: 2, fontWeight: 'bold', color: 'text.primary' }}>
+      <Typography variant="h3" sx={{ mb: 1, fontWeight: 'bold', color: 'text.primary' }}>
         {count}
       </Typography>
 
